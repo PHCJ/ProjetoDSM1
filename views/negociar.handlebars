@@ -1,0 +1,71 @@
+<div class="container mw-80">
+    <div class="row justify-content-center">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+
+            <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                    {
+                        "symbols": [
+                            [
+                                "BINANCE:BTCUSDT|1D"
+                            ]
+                        ],
+                            "chartOnly": false,
+                                "width": 1000,
+                                    "height": 500,
+                                        "locale": "br",
+                                            "colorTheme": "light",
+                                                "autosize": false,
+                                                    "showVolume": false,
+                                                        "showMA": false,
+                                                            "hideDateRanges": false,
+                                                                "hideMarketStatus": false,
+                                                                    "hideSymbolLogo": false,
+                                                                        "scalePosition": "right",
+                                                                            "scaleMode": "Normal",
+                                                                                "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                                                                                    "fontSize": "10",
+                                                                                        "noTimeScale": false,
+                                                                                            "valuesTracking": "1",
+                                                                                                "changeMode": "price-and-percent",
+                                                                                                    "chartType": "area",
+                                                                                                        "maLineColor": "#2962FF",
+                                                                                                            "maLineWidth": 1,
+                                                                                                                "maLength": 9,
+                                                                                                                    "lineWidth": 2,
+                                                                                                                        "lineType": 0,
+                                                                                                                            "dateRanges": [
+                                                                                                                                "1d|1",
+                                                                                                                                "1m|30",
+                                                                                                                                "3m|60",
+                                                                                                                                "12m|1D",
+                                                                                                                                "60m|1W",
+                                                                                                                                "all|1M"
+                                                                                                                            ]
+                    }
+                </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <div class="row">
+                <form action="/comprar" method="POST">
+                    <label for="form-label">Comprar</label>
+                    <input type="number" name="valor_compra" class="form-control" id="valor_compra">
+                    <button type="submit" class="btn btn-success m-1">Comprar</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <form action="/vender" method="POST">
+                <label for="form-label">Vender</label>
+                <input type="number" name="valor_venda" class="form-control" id="valor_venda">
+                <button type="submit" class="btn btn-danger m-1">Vender</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-1">
+        &nbsp;
+    </div>
+    <div class="col bg-white">
+        <p class="text-start fs-5">Operações realizadas</p>
+        <p>
+        <div class="container text-center">
+            <div class="row bg-secondary">
+                <div class="col text-white">
+                    Saldo
+                </div>
+                <div class="col text-white">
+                    Compra
+                </div>
+                <div class="col text-white">
+                    Venda
+                </div>
+            </div>
+            {{#each operacao}}
+            {{#dataValues}}
+            <div class="row">
+                <div class="col">
+                    {{saldo}}
+                </div>
+                <div class="col">
+                    {{valor_compra}}
+                </div>
+                <div class="col">
+                    {{valor_venda}}
+                </div>
+            </div>
+            {{/dataValues}}
+            {{/each}}
+        </div>
+        </p>
+    </div>
+</div>
