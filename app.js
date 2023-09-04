@@ -19,10 +19,10 @@ app.get("/negociar", function(req, res){
     res.render("negociar")
 })
 
-saldol = 1000
+saldol = 1000.0
 
 app.post("/comprar", function(req, res){
-    saldol -= req.body.valor_compra
+    saldol -= parseFloat(req.body.valor_compra)
     operacao.create({
         saldo: saldol,
         valor_compra: req.body.valor_compra,
@@ -38,7 +38,7 @@ app.post("/comprar", function(req, res){
 })
 
 app.post("/vender", function(req, res){
-    saldol -= req.body.valor_venda
+    saldol += parseFloat(req.body.valor_venda)
     operacao.create({
         saldo: saldol,
         valor_compra: 0,
